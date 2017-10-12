@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import _ from 'lodash';
 
-
 @Component({
   selector: 'app-measuring-operation-duration',
   templateUrl: './measuring-operation-duration.component.html',
   styleUrls: ['./measuring-operation-duration.component.css']
 })
 export class MeasuringOperationDurationComponent implements OnInit {
+  private _dataset: number[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    for (let i = 0; i < 1000000; i++) {
+      this._dataset.push(i);
+    }
   }
+
+  ngOnInit() { }
 
   public onClickRunSingleTimer(): void {
     const timerName = 'Some meaningful timer name';
@@ -23,25 +26,21 @@ export class MeasuringOperationDurationComponent implements OnInit {
 
   // Following example comes from http://madole.xyz/using-console-time-to-profile-performance-in-your-node-app/
   public onClickRunMultipleTimers(): void {
-    const dataset = [];
-    for (let i = 0; i < 1000000; i++) {
-        dataset.push(i);
-    }
 
     console.time('map');
-    const squared = dataset.map(x => x * x);
+    const squared = this._dataset.map(x => x * x);
     console.timeEnd('map');
 
     console.time('lodash map');
-    const lodashSquared = _.map(dataset, x => x * x);
+    const lodashSquared = _.map(this._dataset, x => x * x);
     console.timeEnd('lodash map');
 
     console.time('filter');
-    const filtered = dataset.filter(x => x % 2 === 0);
+    const filtered = this._dataset.filter(x => x % 2 === 0);
     console.timeEnd('filter');
 
     console.time('lodash filter');
-    const lodashFiltered = _.filter(dataset, x => x % 2 === 0);
+    const lodashFiltered = _.filter(this._dataset, x => x % 2 === 0);
     console.timeEnd('lodash filter');
   }
 }
