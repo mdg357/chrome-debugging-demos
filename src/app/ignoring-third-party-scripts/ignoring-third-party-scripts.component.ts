@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import _ from 'lodash';
 
 @Component({
@@ -6,7 +6,7 @@ import _ from 'lodash';
   templateUrl: './ignoring-third-party-scripts.component.html',
   styleUrls: ['./ignoring-third-party-scripts.component.css']
 })
-export class IgnoringThirdPartyScriptsComponent implements OnInit {
+export class IgnoringThirdPartyScriptsComponent {
   private _dataset: number[];
 
   constructor() {
@@ -14,9 +14,6 @@ export class IgnoringThirdPartyScriptsComponent implements OnInit {
     for (let i = 0; i < 1000000; i++) {
         this._dataset.push(i);
     }
-  }
-
-  ngOnInit() {
   }
 
   public onClickRunThirdPartyScript(): void {

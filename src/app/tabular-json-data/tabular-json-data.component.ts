@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tabular-json-data',
   templateUrl: './tabular-json-data.component.html',
   styleUrls: ['./tabular-json-data.component.css']
 })
-export class TabularJsonDataComponent implements OnInit {
+export class TabularJsonDataComponent {
 
   constructor() { }
 
@@ -151,9 +151,6 @@ export class TabularJsonDataComponent implements OnInit {
     gender: 'Male',
     ip_address: '246.134.191.49'
   }];
-
-  ngOnInit() {
-  }
 
   public onClickLogButton(): void {
     console.log(this._someReallyLongJsonData);

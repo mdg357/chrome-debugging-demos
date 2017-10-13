@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import _ from 'lodash';
 
 @Component({
@@ -6,7 +6,7 @@ import _ from 'lodash';
   templateUrl: './measuring-operation-duration.component.html',
   styleUrls: ['./measuring-operation-duration.component.css']
 })
-export class MeasuringOperationDurationComponent implements OnInit {
+export class MeasuringOperationDurationComponent {
   private _dataset: number[];
 
   constructor() {
@@ -15,8 +15,6 @@ export class MeasuringOperationDurationComponent implements OnInit {
       this._dataset.push(i);
     }
   }
-
-  ngOnInit() { }
 
   public onClickRunSingleTimer(): void {
     const timerName = 'Some meaningful timer name';
