@@ -4,12 +4,17 @@
   <code>Ctrl</code> + <code>Shift</code> + <code>I</code>&nbsp;&nbsp;or&nbsp;&nbsp;
   <code>F12</code>
 </blockquote>
-<h4>2. Click on the button below to manually increase the memory used by this page</h4>
+<h4>2. Navigate to the "Performance" tab</h4>
+<p>Ensure the "Memory" checkbox is checked. Then click on the record icon.</p>
+<blockquote>
+  <img src="assets/images/EvaluateHeapMemoryUsage01.png" />
+</blockquote>
+<h4>3. Click on the button below to manually increase the memory used by this page</h4>
 <p>This works by creating 10,000 <code>div</code> nodes and pushing a string consisting of 'x' repeating 1 million times</p>
 <blockquote>
     <button (click)="onClickConsumeMemory()" class="btn btn-primary" type="button">Manually Consume Memory</button>
 </blockquote>
-<h4>3. Click on the button below to manually increase the memory used by this page</h4>
+<h4>4. Click on the button below to manually increase the memory used by this page</h4>
 <p>This does the same as above, but it repeats itself over the course of 10 seconds</p>
 <blockquote>
   <button (click)="onClickConsumeMemoryOnTimer()" class="btn btn-primary" type="button">Consume Memory on Timer</button>
