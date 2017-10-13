@@ -5,7 +5,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { TabularJsonDataComponent } from '../tabular-json-data/tabular-json-data.component';
 import { MeasuringOperationDurationComponent } from '../measuring-operation-duration/measuring-operation-duration.component';
 import { IgnoringThirdPartyScriptsComponent } from '../ignoring-third-party-scripts/ignoring-third-party-scripts.component';
-import { EvaluateMemoryUsageComponent } from '../evaluate-memory-usage/evaluate-memory-usage.component';
+import { EvaluateHeapMemoryUsageComponent } from '../evaluate-heap-memory-usage/evaluate-heap-memory-usage.component';
+import { DiscoverMemoryLeaksComponent } from '../discover-memory-leaks/discover-memory-leaks.component';
 
 const routes: Routes = [
   {
@@ -29,9 +30,14 @@ const routes: Routes = [
     data: { title: 'Ignoring Third-Party Scripts'}
   },
   {
-    path: 'EvaluateMemoryUsage',
-    component: EvaluateMemoryUsageComponent,
-    data: { title: 'Evaluate Memory Usage'}
+    path: 'EvaluateHeapMemoryUsage',
+    component: EvaluateHeapMemoryUsageComponent,
+    data: { title: 'Evaluate Heap Memory Usage'}
+  },
+  {
+    path: 'DiscoverMemoryLeaks',
+    component: DiscoverMemoryLeaksComponent,
+    data: { title: 'Discover Memory Leaks'}
   }
 ];
 

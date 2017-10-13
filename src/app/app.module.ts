@@ -7,7 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TabularJsonDataComponent } from './tabular-json-data/tabular-json-data.component';
 import { MeasuringOperationDurationComponent } from './measuring-operation-duration/measuring-operation-duration.component';
 import { IgnoringThirdPartyScriptsComponent } from './ignoring-third-party-scripts/ignoring-third-party-scripts.component';
-import { EvaluateMemoryUsageComponent } from './evaluate-memory-usage/evaluate-memory-usage.component';
+import { EvaluateHeapMemoryUsageComponent } from './evaluate-heap-memory-usage/evaluate-heap-memory-usage.component';
+import { DiscoverMemoryLeaksComponent } from './discover-memory-leaks/discover-memory-leaks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EvaluateMemoryUsageComponent } from './evaluate-memory-usage/evaluate-m
     TabularJsonDataComponent,
     MeasuringOperationDurationComponent,
     IgnoringThirdPartyScriptsComponent,
-    EvaluateMemoryUsageComponent
+    EvaluateHeapMemoryUsageComponent,
+    DiscoverMemoryLeaksComponent
   ],
   imports: [
     BrowserModule,

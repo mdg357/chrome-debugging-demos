@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EvaluateMemoryUsageComponent } from './evaluate-memory-usage.component';
+import { EvaluateHeapMemoryUsageComponent } from './evaluate-heap-memory-usage.component';
 
 describe('EvaluateMemoryUsageComponent', () => {
-  let component: EvaluateMemoryUsageComponent;
-  let fixture: ComponentFixture<EvaluateMemoryUsageComponent>;
+  let component: EvaluateHeapMemoryUsageComponent;
+  let fixture: ComponentFixture<EvaluateHeapMemoryUsageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EvaluateMemoryUsageComponent ]
+      declarations: [ EvaluateHeapMemoryUsageComponent ]
     })
     .compileComponents();
   }));
