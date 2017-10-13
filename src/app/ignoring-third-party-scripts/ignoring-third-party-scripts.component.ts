@@ -10,6 +10,7 @@ export class IgnoringThirdPartyScriptsComponent implements OnInit {
   private _dataset: number[];
 
   constructor() {
+    this._dataset = [];
     for (let i = 0; i < 1000000; i++) {
         this._dataset.push(i);
     }
@@ -20,7 +21,6 @@ export class IgnoringThirdPartyScriptsComponent implements OnInit {
 
   public onClickRunThirdPartyScript(): void {
     debugger;
-    const squared = this._dataset.map(x => x * x);
+    const lodashSquared = _.map(this._dataset, x => x * x);
   }
-
 }

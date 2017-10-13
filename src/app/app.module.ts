@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { EvaluatePerformanceComponent } from './evaluate-performance/evaluate-performance.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TabularJsonDataComponent } from './tabular-json-data/tabular-json-data.component';
@@ -13,7 +12,6 @@ import { EvaluateMemoryUsageComponent } from './evaluate-memory-usage/evaluate-m
 @NgModule({
   declarations: [
     AppComponent,
-    EvaluatePerformanceComponent,
     DashboardComponent,
     TabularJsonDataComponent,
     MeasuringOperationDurationComponent,

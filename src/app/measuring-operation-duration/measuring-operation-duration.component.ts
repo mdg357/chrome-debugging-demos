@@ -10,6 +10,7 @@ export class MeasuringOperationDurationComponent implements OnInit {
   private _dataset: number[];
 
   constructor() {
+    this._dataset = [];
     for (let i = 0; i < 1000000; i++) {
       this._dataset.push(i);
     }
